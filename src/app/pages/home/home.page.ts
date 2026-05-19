@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
+import { WelcomeComponent } from '@components/welcome/welcome.component';
+
+
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +19,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule 
+    RouterModule,
+    WelcomeComponent
   ]
 })
 

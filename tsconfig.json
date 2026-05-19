@@ -8,12 +8,12 @@
     "paths": {
       "@/*": ["app/*"],
       "@app/*": ["app/*"],
-      "@services/*": ["services/*"],
+      "@components/*": ["app/components/*"],     
+      "@services/*": ["app/services/*"],
       "@environments/*": ["environments/*"],
       "@assets/*": ["assets/*"],
-      "@theme/*": ["theme/*"],
-      "@modules/*": ["modules/*"],
-      "@components/*": ["components/*"]      
+      "@theme/*": ["atheme/*"],
+       
     },
 
     "types": ["@angular/localize"],
