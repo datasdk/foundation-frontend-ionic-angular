@@ -1,29 +1,72 @@
-# Datas Module
+# Foundation Frontend Ionic Angular
 
-This repository contains a module used within the Datas ecosystem.
+Basic Ionic Angular frontend starter for building native apps within the Datas ecosystem.
 
-## Usage
+This project is designed to be used as a frontend foundation for mobile applications using Ionic and Angular.
 
-This module is not intended to run as a standalone application.
-It is designed to be installed and used through the Datas platform.
+---
+
+## Clone Repository
+
+```bash
+git clone https://github.com/datasdk/foundation-frontend-ionic-angular.git
+```
+
+---
+
+## Go to Project Folder
+
+```bash
+cd foundation-frontend-ionic-angular
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Start Development Server
+
+```bash
+ng serve
+```
+
+---
+
+## About
+
+This is a basic Ionic Angular frontend setup intended for developing native applications using the Ionic framework and Angular.
+
+---
 
 ## Documentation
 
 For installation guides, developer documentation, and integration details, please visit:
 
-* [https://datas.dk/developer](https://datas.dk/developer)
+https://datas.dk/developer
+
+---
 
 ## Requirements
 
-* Datas CMS / Datas Platform
-* PHP
-* Laravel
+- Datas CMS / Datas Platform
+- PHP
+- Laravel
+
+---
 
 ## Support
 
 For support and additional resources, visit:
 
-* [https://datas.dk](https://datas.dk)
+https://datas.dk
+
+---
 
 ## License
 
