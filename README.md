@@ -1,36 +1,43 @@
 # Foundation Frontend Ionic Angular
 
-Foundation er et Ionic Angular frontend-projekt, der kan køre som web-app og som native Android/iOS-app via Capacitor.
+Foundation is an Ionic Angular frontend project that can run as both a web application and a native Android/iOS application using Capacitor.
 
-## Installer dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-Projektet er sat op med Capacitor 8:
+The project is configured with Capacitor 8:
 
-- `@capacitor/core` og `@capacitor/cli`
-- `@capacitor/android` og `@capacitor/ios`
-- Splash Screen, Status Bar, Screen Orientation, Network, Device og App
-- Capacitor Cookies via `CapacitorCookies` i `capacitor.config.ts`
+- `@capacitor/core`
+- `@capacitor/cli`
+- `@capacitor/android`
+- `@capacitor/ios`
+- Splash Screen
+- Status Bar
+- Screen Orientation
+- Network
+- Device
+- App
+- Capacitor Cookies via `CapacitorCookies` in `capacitor.config.ts`
 - Capacitor Assets via `@capacitor/assets`
 
-## Web-udvikling
+## Web Development
 
 ```bash
 npm start
 ```
 
-Build:
+Build the project:
 
 ```bash
 npm run build
 ```
 
-Angular bygger den danske app til `www/da`, som er sat som Capacitor `webDir`.
+Angular builds the Danish application into `www/da`, which is configured as the Capacitor `webDir`.
 
-## Capacitor-kommandoer
+## Capacitor Commands
 
 ```bash
 npm run cap:add:android
@@ -41,30 +48,49 @@ npm run cap:open:android
 npm run cap:open:ios
 ```
 
-Brug den samlede sync-kommando, når web-build, assets eller plugins er ændret:
+Use the combined sync command whenever web builds, assets, or plugins are changed:
 
 ```bash
 npm run mobile:sync
 ```
 
-## Splash screens og app icons
+## Splash Screens and App Icons
 
-Kilde-filerne ligger her:
+Source files are located here:
 
 ```text
 src/assets/app/icons
 src/assets/app/splashscreens
 ```
 
-Generer native ikoner og splash screens:
+Generate native app icons and splash screens:
 
 ```bash
 npm run cap:assets
 ```
 
-`cap:assets` kører først `scripts/prepare-capacitor-assets.mjs`, som samler filerne fra `icons` og `splashscreens` i `src/assets/app/.capacitor-assets`. Derefter kører `capacitor-assets generate --assetPath src/assets/app/.capacitor-assets`.
+`cap:assets` first runs:
 
-De forventede kildefiler er:
+```bash
+scripts/prepare-capacitor-assets.mjs
+```
+
+This script collects all required assets from:
+
+```text
+src/assets/app/icons
+src/assets/app/splashscreens
+```
+
+and prepares them inside:
+
+```text
+src/assets/app/.capacitor-assets
+```
+
+Afterwards, Capacitor Assets generates the native resources automatically.
+
+Expected source files:
 
 ```text
 src/assets/app/icons/icon.png
@@ -75,96 +101,47 @@ src/assets/app/splashscreens/splash.png
 src/assets/app/splashscreens/splash-dark.png
 ```
 
-## Android-app
+## Android Application
 
-Tilføj Android-projektet første gang:
+Add the Android project for the first time:
 
 ```bash
 npm run cap:add:android
 ```
 
-Byg og sync:
+Build and sync:
 
 ```bash
 npm run mobile:sync
 ```
 
-Åbn Android Studio:
+Open Android Studio:
 
 ```bash
 npm run cap:open:android
 ```
 
-## iOS-app
+## iOS Application
 
-Tilføj iOS-projektet første gang:
+Add the iOS project for the first time:
 
 ```bash
 npm run cap:add:ios
 ```
 
-Byg og sync:
+Build and sync:
 
 ```bash
 npm run mobile:sync
 ```
 
-Åbn Xcode på macOS:
+Open Xcode on macOS:
 
 ```bash
 npm run cap:open:ios
 ```
 
-## Deep links
-
-Deep links er forberedt fra start.
-
-Understøttede indgange:
-
-```text
-foundation://home
-https://datas.dk/home
-https://www.datas.dk/home
-```
-
-Angular håndterer links i `src/core/services/deep-link.service.ts` via Capacitor `App.addListener('appUrlOpen', ...)`.
-
-Android-konfigurationen ligger i:
-
-```text
-android/app/src/main/AndroidManifest.xml
-```
-
-iOS-konfigurationen ligger i:
-
-```text
-ios/App/App/Info.plist
-ios/App/App/App.entitlements
-```
-
-Domænerne `datas.dk` og `www.datas.dk` skal også have en gyldig `apple-app-site-association` og Android `assetlinks.json`, når de endelige app-signeringer er kendt.
-
-## Dokumentation
-
-PDF-guiden ligger i:
-
-```text
-docs/capacitor-guide.pdf
-```
-
-Kilde-dokumentet ligger i:
-
-```text
-docs/capacitor-guide.md
-```
-
-Regenerer PDF:
-
-```bash
-npm run docs:pdf
-```
-
-## Typisk arbejdsgang
+## Typical Workflow
 
 ```bash
 npm install
@@ -175,7 +152,7 @@ npm run cap:assets
 npm run cap:sync
 ```
 
-Efter første platform-tilføjelse:
+After the initial platform setup:
 
 ```bash
 npm run mobile:sync
@@ -183,7 +160,7 @@ npm run mobile:sync
 
 ## Support
 
-For support og yderligere ressourcer:
+For support and additional resources:
 
 https://datas.dk
 
