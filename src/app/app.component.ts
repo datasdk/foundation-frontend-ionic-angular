@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IonContent } from '@ionic/angular/standalone';
+
+import { CapacitorPlatformService } from '../core/services/capacitor-platform.service';
+import { DeepLinkService } from '../core/services/deep-link.service';
 
 
 @Component({
@@ -16,5 +18,11 @@ import { IonContent } from '@ionic/angular/standalone';
   ],
 })
 export class AppComponent {
-  constructor() {}
+  private readonly capacitorPlatform = inject(CapacitorPlatformService);
+  private readonly deepLinks = inject(DeepLinkService);
+
+  constructor() {
+    this.capacitorPlatform.initialize();
+    this.deepLinks.initialize();
+  }
 }

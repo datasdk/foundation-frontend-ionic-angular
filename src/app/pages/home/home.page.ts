@@ -1,14 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-
-import { WelcomeComponent } from '@components/welcome/welcome.component';
-
-
-
 
 @Component({
   selector: 'app-home',
@@ -19,15 +14,7 @@ import { WelcomeComponent } from '@components/welcome/welcome.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule,
-    WelcomeComponent
+    RouterModule
   ]
 })
-
-
-export class HomePage implements OnInit {
-
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class HomePage {}

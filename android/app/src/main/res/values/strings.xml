@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Foundation</string>
+    <string name="title_activity_main">Foundation</string>
+    <string name="package_name">dk.datas.foundation</string>
+    <string name="custom_url_scheme">dk.datas.foundation</string>
+</resources>

@@ -8,11 +8,10 @@
     "paths": {
       "@/*": ["app/*"],
       "@app/*": ["app/*"],
-      "@components/*": ["app/components/*"],     
-      "@services/*": ["app/services/*"],
+      "@core/*": ["core/*"],
       "@environments/*": ["environments/*"],
       "@assets/*": ["assets/*"],
-      "@theme/*": ["atheme/*"],
+      "@theme/*": ["theme/*"]
        
     },
 
